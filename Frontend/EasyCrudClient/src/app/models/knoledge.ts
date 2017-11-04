@@ -1,0 +1,29 @@
+export class Knoledge {
+  id: number;
+  ionic: string;
+  android: string;
+  ios: string;
+  html: string;
+  css: string;
+  bootstrap: string;
+  jquery: string;
+  angular: string;
+  java: string;
+  aspnet: string;
+  c: string;
+  cpp: string;
+  cake: string;
+  django: string;
+  majento: string;
+  php: string;
+  wordpress: string;
+  python: string;
+  ruby: string;
+  sqls: string;
+  mysql: string;
+  salesforce: string;
+  photoshop: string;
+  illustrator: string;
+  seo: string;
+  other: string;
+}
