@@ -1,9 +1,9 @@
 export class BankInfo {
-  id: number;
-  name: string;
-  cpf: string;
-  bank: string;
-  agency: string;
-  accType: number;
-  accNumber: string;
+  id: number = null;
+  name: string = null;
+  cpf: string = null;
+  bank: string = null;
+  agency: string = null;
+  accType: number = null;
+  accNumber: string = null;
 }

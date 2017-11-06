@@ -1,0 +1,89 @@
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Banco de Talentos - Easy Communication & Technology (Developers/Desenvolvedores)
+      </h1>
+      <h2 class="subtitle">
+        Cadastro de Programadores
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container box">
+    <div>
+      <p class="title">
+        Informações bancárias
+      </p>
+      <p>Você pode optar em receber seu pagamento pelo Paypal, PagSeguro ou contas bancárias convencionais.</p>
+    </div>
+    <br>
+
+    <div class="field">
+      <label class="label is-large">Nome</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="bankInfo.name">
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">CPF</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="bankInfo.cpf">
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Banco ( Itau, Bradesco, ect.)</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="bankInfo.bank">
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Agência</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="bankInfo.agency">
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Número da conta</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="bankInfo.accNumber">
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Tipo de conta</label>
+      <div class="control">
+        <div>
+          <label class="radio">
+              <input type="radio" name="answer" [checked]="bankInfo.accType" (change)="bankInfo.accType = 1"> Corrente
+         </label>
+        </div>
+        <div>
+          <label class="radio">
+              <input type="radio" name="answer" [checked]="bankInfo.accType" (change)="bankInfo.accType = 2"> Poupança
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="columns">
+      <div class="column is-half">
+        <a class="button is-dark is-medium" (click)="back()">Voltar</a>
+        <a class="button is-dark is-medium" (click)="next()">Próximo</a>
+      </div>
+      <div class="column">
+        <progress class="progress is-primary" value="75" max="100"></progress>
+      </div>
+      <div class="column">
+        Página 3 / 4
+      </div>
+    </div>
+
+  </div>
+</section>

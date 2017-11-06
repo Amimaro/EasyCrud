@@ -1,0 +1,188 @@
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Banco de Talentos - Easy Communication & Technology (Developers/Desenvolvedores)
+      </h1>
+      <h2 class="subtitle">
+        Cadastro de Programadores
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container box">
+    <p class="has-text-danger">* Campo Obrigatório</p>
+    <br>
+    <div>
+      <p class="title">
+        Área de atuação
+      </p>
+      <p>Se você atua como desenvolvedor ou DBA, continue o preenchimento deste formulário.</p>
+      <p>Se você atua como designer, preencha ao formulário disponível em <a href="https://goo.gl/forms/UJl8Oa91ubN3HRUm1" target="_blank">https://goo.gl/forms/UJl8Oa91ubN3HRUm1</a>.</p>
+      <p>Se você atua na área administrativa, atendimento ao cliente ou comercial, preencha ao formulário disponível em <a href="https://goo.gl/forms/0M99jjUwnIAw0flJ2">https://goo.gl/forms/0M99jjUwnIAw0flJ2</a>.</p>
+    </div>
+    <br>
+
+    <div class="field">
+      <label class="label is-large">Nome <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.name">
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Cidade <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.city">
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Estado <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.state">
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Telefone (Whatsapp) <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.phone">
+        <span class="icon is-small is-left"><i class="fa fa-phone"></i></span>
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Skype (bom criar caso não tenha) <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.skype">
+        <span class="icon is-small is-left"><i class="fa fa-skype"></i></span>
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Linkedin</label>
+      <div class="control has-icons-left">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.linkedin">
+        <span class="icon is-small is-left"><i class="fa fa-linkedin"></i></span>
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Portfolio</label>
+      <div class="control has-icons-left">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.portfolio">
+        <span class="icon is-small is-left"><i class="fa fa-sitemap"></i></span>
+      </div>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Qual é sua disponibilidade para trabalhar hoje? <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control">
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="availability.op1" (change)="availability.op1 = !availability.op1"> Até 4 horas por dia
+          </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="availability.op2" (change)="availability.op2 = !availability.op2"> De 4 á 6 horas por dia
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="availability.op3" (change)="availability.op3 = !availability.op3"> De 6 á 8 horas por dia
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="availability.op4" (change)="availability.op4 = !availability.op4"> Acima de 8 horas por dia (tem certeza?)
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="availability.op5" (change)="availability.op5 = !availability.op5"> Apenas finais de semana
+           </label>
+        </div>
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Pra você qual é o melhor horário para trabalhar? <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control">
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="bestTime.op1" (change)="bestTime.op1 = !bestTime.op1"> Manhã (de 08:00 ás 12:00)
+          </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="bestTime.op2" (change)="bestTime.op2 = !bestTime.op2"> Tarde (de 13:00 ás 18:00)
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="bestTime.op3" (change)="bestTime.op3 = !bestTime.op3"> Noite (de 19:00 as 22:00)
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="bestTime.op4" (change)="bestTime.op4 = !bestTime.op4"> Madrugada (de 22:00 em diante)
+           </label>
+        </div>
+        <div>
+          <label class="checkbox">
+            <input type="checkbox" [checked]="bestTime.op5" (change)="bestTime.op5 = !bestTime.op5"> Comercial (de 08:00 as 18:00)
+           </label>
+        </div>
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Qual sua pretensão salarial por hora? <span style="color:rgb(255, 56, 96);">*</span></label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.salary">
+        <span class="icon is-small is-left"><i class="fa fa-money"></i></span>
+        <!-- <span class="icon is-small is-right"><i class="fa fa-warning"></i></span> -->
+      </div>
+      <!-- <p class="help is-danger">Resposta obrigatória</p> -->
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Bank Information / Paypal / Itau etc</label>
+      <label class="is-small">Banco brasileiro precisa: Nome, CPF, Banco, Agencia, Conta Corrente ou Poupanca</label>
+      <div class="control has-icons-left">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.bank">
+        <span class="icon is-small is-left"><i class="fa fa-university"></i></span>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="columns">
+      <div class="column is-half">
+        <a class="button is-dark is-medium" (click)="back()">Voltar</a>
+        <a class="button is-dark is-medium" (click)="next()">Próximo</a>
+      </div>
+      <div class="column">
+        <progress class="progress is-primary" value="50" max="100"></progress>
+      </div>
+      <div class="column">
+        Página 2 / 4
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgrammerService } from '../../services/programmer.service';
+import { Router } from '@angular/router';
 
 import { Programmer } from '../../models/programmer';
 
@@ -12,14 +13,16 @@ export class HomeComponent implements OnInit {
 
   programmers: Programmer[];
 
-  constructor(private programmerService: ProgrammerService) {
+  constructor(private programmerService: ProgrammerService,
+                private router: Router) {
 
   }
 
   ngOnInit() {
-      this.programmerService
-        .getProgrammers()
-        .then(p => {this.programmers = p; console.log(this.programmers)});
+    //   this.router.navigate(['/programmer/form4']);
+    //   this.programmerService
+    //     .getProgrammers()
+    //     .then(p => {this.programmers = p; console.log(this.programmers)});
   }
 
 }

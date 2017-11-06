@@ -15,11 +15,28 @@ export class ProgrammerService {
   });
   private apiUrl = 'http://localhost:5000/api/programmer';  // URL to web api
 
-  PROGRAMMER: Programmer;
+  selectedProgrammer: number = null;
+  PROGRAMMER: Programmer = new Programmer();
   PROGRAMMERS: Programmer[] = [
   ];
 
   constructor(private http: Http) { }
+
+  setCurrentProgrammer(p): void{
+      this.PROGRAMMER = p;
+  }
+
+  getCurrentProgrammer(): Programmer{
+      return this.PROGRAMMER;
+  }
+
+  setSelectedProgrammer(p): void{
+      this.selectedProgrammer = p;
+  }
+
+  getSelectedProgrammer(): number{
+      return this.selectedProgrammer;
+  }
 
   getProgrammers(): Promise<Programmer[]> {
     return this.http.get(this.apiUrl, { headers: this.headers })

@@ -1,0 +1,177 @@
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Banco de Talentos - Easy Communication & Technology (Developers/Desenvolvedores)
+      </h1>
+      <h2 class="subtitle">
+        Cadastro de Programadores
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container box">
+    <div>
+      <p class="title">
+        Conhecimentos
+      </p>
+      <p>Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!</p>
+    </div>
+    <br>
+
+    <div class="field" *ngFor="let skill of skills">
+      <label class="label is-large">{{skill[0]}} <span style="color:rgb(255, 56, 96);" *ngIf="skill[2] == 1">*</span></label>
+      <div class="control">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column">0</div>
+          <div class="column">1</div>
+          <div class="column">2</div>
+          <div class="column">3</div>
+          <div class="column">4</div>
+          <div class="column">5</div>
+          <div class="column"></div>
+        </div>
+        <div class="columns">
+          <div class="column">Não conheço</div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][0]" name="{{skill[1]}}" (change)="onSelectionChange(0, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][1]" name="{{skill[1]}}" (change)="onSelectionChange(1, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][2]" name="{{skill[1]}}" (change)="onSelectionChange(2, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][3]" name="{{skill[1]}}" (change)="onSelectionChange(3, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][4]" name="{{skill[1]}}" (change)="onSelectionChange(4, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][5]" name="{{skill[1]}}" (change)="onSelectionChange(5, skill)"></label></div>
+          <div class="column">Senior</div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Conhece mais alguma linguagem ou framework que não foi listada em cima? Conte para nos e se autoavalie ainda de 0 a 5.</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="knoledge.other">
+      </div>
+    </div>
+    <br>
+
+    <p>
+      Insira aqui o link do CRUD (create, update, delete)- ler informações no documento de Boas Vindas citado na descrição do formulário.
+    </p>
+    <p>
+      Confira nossos tutoriais e material explicando como a empresa funciona <br> <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM," target="_blank">https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM</a>
+    </p>
+    <br>
+
+    <div class="field">
+      <label class="label is-large">Link CRUD</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="" [(ngModel)]="programmer.link">
+      </div>
+    </div>
+
+    <br><br>
+    <div class="columns">
+      <div class="column is-half">
+        <a class="button is-dark is-medium" (click)="back()">Voltar</a>
+        <a class="button is-info is-medium" (click)="send()">Enviar</a>
+      </div>
+      <div class="column">
+        <progress class="progress is-primary" value="100" max="100"></progress>
+      </div>
+      <div class="column">
+        Página 4 / 4
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Banco de Talentos - Easy Communication & Technology (Developers/Desenvolvedores)
+      </h1>
+      <h2 class="subtitle">
+        Cadastro de Programadores
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container box">
+    <div>
+      <p class="title">
+        Conhecimentos
+      </p>
+      <p>Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!</p>
+    </div>
+    <br>
+
+    <div class="field" *ngFor="let skill of skills">
+      <label class="label is-large">{{skill[0]}} <span style="color:rgb(255, 56, 96);" *ngIf="skill[2] == 1">*</span></label>
+      <div class="control">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column">0</div>
+          <div class="column">1</div>
+          <div class="column">2</div>
+          <div class="column">3</div>
+          <div class="column">4</div>
+          <div class="column">5</div>
+          <div class="column"></div>
+        </div>
+        <div class="columns">
+          <div class="column">Não conheço</div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][0]" name="{{skill[1]}}" (change)="onSelectionChange(1, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][1]" name="{{skill[1]}}" (change)="onSelectionChange(2, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][2]" name="{{skill[1]}}" (change)="onSelectionChange(3, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][3]" name="{{skill[1]}}" (change)="onSelectionChange(4, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][4]" name="{{skill[1]}}" (change)="onSelectionChange(5, skill)"></label></div>
+          <div class="column"><label class="radio"><input type="radio" [checked]="skill[3][5]" name="{{skill[1]}}" (change)="onSelectionChange(6, skill)"></label></div>
+          <div class="column">Senior</div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <br>
+    <div class="field">
+      <label class="label is-large">Conhece mais alguma linguagem ou framework que não foi listada em cima? Conte para nos e se autoavalie ainda de 0 a 5.</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="">
+      </div>
+    </div>
+    <br>
+
+    <p>
+      Insira aqui o link do CRUD (create, update, delete)- ler informações no documento de Boas Vindas citado na descrição do formulário.
+    </p>
+    <p>
+      Confira nossos tutoriais e material explicando como a empresa funciona <br> <a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM," target="_blank">https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM</a>
+    </p>
+    <br>
+
+    <div class="field">
+      <label class="label is-large">Link CRUD</label>
+      <div class="control">
+        <input class="input is-medium" type="text" placeholder="Sua resposta" value="">
+      </div>
+    </div>
+
+    <br><br>
+    <div class="columns">
+      <div class="column is-half">
+        <a class="button is-dark is-medium" (click)="back()">Voltar</a>
+        <a class="button is-info is-medium" (click)="send()">Enviar</a>
+      </div>
+      <div class="column">
+        <progress class="progress is-primary" value="100" max="100"></progress>
+      </div>
+      <div class="column">
+        Página 4 / 4
+      </div>
+    </div>
+
+  </div>
+</section> -->

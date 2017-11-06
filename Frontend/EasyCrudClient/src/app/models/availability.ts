@@ -1,8 +1,8 @@
 export class Availability {
-  id: number;
-  op1: boolean;
-  op2: boolean;
-  op3: boolean;
-  op4: boolean;
-  op5: boolean;
+  id: number = null;
+  op1: boolean = false;
+  op2: boolean = false;
+  op3: boolean = false;
+  op4: boolean = false;
+  op5: boolean = false;
 }
