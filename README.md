@@ -4,7 +4,7 @@ Backend: .Net Core
 
 Frontend: AngularJs
 
-Bando de Dados: SQL Server
+Banco de Dados: SQL Server
 
 <hr>
 
