@@ -36,7 +36,7 @@ Banco de Dados: SQL Server
 ![alt tag](https://github.com/Amimaro/EasyCrud/blob/master/Prints/home_post.png)
 
 #### Editar programador: PUT com edição dos campos 'nome' e 'email' do programador cadastrado
-![alt tag](https://github.com/Amimaro/EasyCrud/blob/master/Prints/home_delete.png)
+![alt tag](https://github.com/Amimaro/EasyCrud/blob/master/Prints/home_put.png)
 
 #### Deletar programador: DELETE do programador cadastrado
 ![alt tag](https://github.com/Amimaro/EasyCrud/blob/master/Prints/home_delete.png)
