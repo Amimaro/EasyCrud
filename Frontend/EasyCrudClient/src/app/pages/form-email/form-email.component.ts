@@ -18,7 +18,7 @@ export class FormEmailComponent implements OnInit {
 
   ngOnInit() {
     this.programmer = this.programmerService.getCurrentProgrammer();
-    console.log(this.programmerService.getCurrentProgrammer());
+    console.log(this.programmer);
   }
 
   next() {

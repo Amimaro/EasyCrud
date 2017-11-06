@@ -60,12 +60,12 @@
       <div class="control">
         <div>
           <label class="radio">
-              <input type="radio" name="answer" [checked]="bankInfo.accType" (change)="bankInfo.accType = 1"> Corrente
+              <input type="radio" name="answer" value="0" [checked]="bankInfo.accType" (change)="bankInfo.accType = 0"> Corrente
          </label>
         </div>
         <div>
           <label class="radio">
-              <input type="radio" name="answer" [checked]="bankInfo.accType" (change)="bankInfo.accType = 2"> Poupança
+              <input type="radio" name="answer" value="1" [checked]="bankInfo.accType" (change)="bankInfo.accType = 1"> Poupança
           </label>
         </div>
       </div>

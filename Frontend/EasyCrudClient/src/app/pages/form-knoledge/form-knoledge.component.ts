@@ -21,7 +21,7 @@ export class FormKnoledgeComponent implements OnInit {
     ['CSS', 'css', 0, [0, 0, 0, 0, 0, 0]],
     ['Bootstrap', 'bootstrap', 1, [0, 0, 0, 0, 0, 0]],
     ['JQuery', 'jquery', 1, [0, 0, 0, 0, 0, 0]],
-    ['AngularJs', 'angularjs', 1, [0, 0, 0, 0, 0, 0]],
+    ['AngularJs', 'angular', 1, [0, 0, 0, 0, 0, 0]],
     ['Java', 'java', 1, [0, 0, 0, 0, 0, 0]],
     ['Asp.Net MVC', 'aspnet', 1, [0, 0, 0, 0, 0, 0]],
     ['C', 'c', 0, [0, 0, 0, 0, 0, 0]],
@@ -33,7 +33,7 @@ export class FormKnoledgeComponent implements OnInit {
     ['Wordpress', 'wordpress', 1, [0, 0, 0, 0, 0, 0]],
     ['Python', 'python', 0, [0, 0, 0, 0, 0, 0]],
     ['Ruby', 'ruby', 0, [0, 0, 0, 0, 0, 0]],
-    ['MySQL Server', 'mysqls', 0, [0, 0, 0, 0, 0, 0]],
+    ['MySQL Server', 'sqls', 0, [0, 0, 0, 0, 0, 0]],
     ['MySQL', 'mysql', 0, [0, 0, 0, 0, 0, 0]],
     ['Salesforce', 'salesforce', 0, [0, 0, 0, 0, 0, 0]],
     ['Photoshop', 'photoshop', 0, [0, 0, 0, 0, 0, 0]],
@@ -48,7 +48,14 @@ export class FormKnoledgeComponent implements OnInit {
 
   ngOnInit() {
     this.programmer = this.programmerService.getCurrentProgrammer();
-    console.log(this.programmerService.getCurrentProgrammer());
+    if (this.programmer.knoledge != null) {
+      this.knoledge = this.programmer.knoledge;
+      console.log(this.knoledge['ionic']);
+      for (var i in this.skills) {
+        this.skills[i][3][this.knoledge[this.skills[i][1] + '']] = 1;
+      }
+    }
+    console.log(this.programmer);
   }
 
   back() {
@@ -66,7 +73,7 @@ export class FormKnoledgeComponent implements OnInit {
     }
     this.programmer.knoledge = this.knoledge;
     this.programmerService.setCurrentProgrammer(this.programmer);
-    console.log(this.programmerService.getCurrentProgrammer());
+    this.programmerService.createOrUpdateProgrammer();
   }
 
   onSelectionChange(option, skill) {

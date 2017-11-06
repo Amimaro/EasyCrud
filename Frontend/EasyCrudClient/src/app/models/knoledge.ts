@@ -7,7 +7,7 @@ export class Knoledge {
   css: string = null;
   bootstrap: string = null;
   jquery: string = null;
-  angularjs: string = null;
+  angular: string = null;
   java: string = null;
   aspnet: string = null;
   c: string = null;
@@ -19,7 +19,7 @@ export class Knoledge {
   wordpress: string = null;
   python: string = null;
   ruby: string = null;
-  mysqls: string = null;
+  sqls: string = null;
   mysql: string = null;
   salesforce: string = null;
   photoshop: string = null;

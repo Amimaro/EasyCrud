@@ -20,7 +20,9 @@ export class FormBankComponent implements OnInit {
 
   ngOnInit() {
     this.programmer = this.programmerService.getCurrentProgrammer();
-    console.log(this.programmerService.getCurrentProgrammer());
+    if(this.programmer.bankInfo != null)
+        this.bankInfo = this.programmer.bankInfo;
+    console.log(this.programmer);
   }
 
   next() {

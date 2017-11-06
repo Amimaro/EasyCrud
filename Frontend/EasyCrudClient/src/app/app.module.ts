@@ -12,10 +12,11 @@ import { FormBankComponent } from './pages/form-bank/form-bank.component';
 import { FormKnoledgeComponent } from './pages/form-knoledge/form-knoledge.component';
 import { FormEmailComponent } from './pages/form-email/form-email.component';
 import { FormOccupationComponent } from './pages/form-occupation/form-occupation.component';
+import { DeleteComponent } from './pages/delete/delete.component';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: 'programmer/home',
     component: HomeComponent,
     data: { title: 'Home' }
   },
@@ -40,8 +41,13 @@ const appRoutes: Routes = [
     data: { title: 'Cadastro - Easy CRUD - Parte 4' }
   },
   {
+    path: 'programmer/delete',
+    component: DeleteComponent,
+    data: { title: 'Cadastro - Easy CRUD' }
+  },
+  {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/programmer/home',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
@@ -56,6 +62,7 @@ const appRoutes: Routes = [
     FormKnoledgeComponent,
     FormEmailComponent,
     FormOccupationComponent,
+    DeleteComponent,
   ],
   imports: [
     BrowserModule,

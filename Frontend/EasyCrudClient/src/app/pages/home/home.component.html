@@ -1,4 +1,75 @@
-<a class="button" routerLink="/programmer/form1">Button</a>
-<a class="button" routerLink="/programmer/form2">Button</a>
-<a class="button" routerLink="/programmer/form3">Button</a>
-<a class="button" routerLink="/programmer/form4">Button</a>
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Banco de Talentos - Easy Communication & Technology (Developers/Desenvolvedores)
+      </h1>
+      <h2 class="subtitle">
+        Cadastro de Programadores
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section container">
+  <a class="button is-primary is-pulled-right is-medium" (click)="go2Form()">
+    <span class="icon">
+      <i class="fa fa-plus"></i>
+    </span>
+    <span>Cadastrar Programador</span>
+  </a>
+  <h3 class="title is-3">Lista de Programadores</h3>
+  <div class="box">
+    <table class="table table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Estado</th>
+          <th>Cidade</th>
+          <th>Média dos Conhecimentos</th>
+          <!-- Edit -->
+          <th></th>
+          <!-- Remove -->
+          <th></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Estado</th>
+          <th>Cidade</th>
+          <th>Média dos Conhecimentos</th>
+          <!-- Edit -->
+          <th></th>
+          <!-- Remove -->
+          <th></th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr *ngFor="let programmer of programmers">
+          <td>{{programmer.name}}</td>
+          <td>{{programmer.email}}</td>
+          <td>{{programmer.phone}}</td>
+          <td>{{programmer.state}}</td>
+          <td>{{programmer.city}}</td>
+          <td [innerHTML]="calcMeanPoints(programmer.knoledge)"></td>
+          <td>
+            <a class="button is-info" (click)="edit(programmer.id)">
+                <span class="icon"><i class="fa fa-pencil"></i></span>
+                <span>Editar</span>
+            </a>
+          </td>
+          <td>
+            <a class="button is-danger" (click)="remove(programmer.id)">
+                  <span class="icon"><i class="fa fa-trash"></i></span>
+                  <span>Remover</span>
+              </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

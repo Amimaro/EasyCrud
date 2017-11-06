@@ -42,7 +42,11 @@ public IActionResult Create([FromBody] Programmer item)
         {
                 return BadRequest();
         }
-
+        // var programmerObj = item;
+        // foreach(var prop in programmerObj.GetType().GetProperties()) {
+        //         Console.WriteLine("{0} = {1}", prop.Name, prop.GetValue(programmerObj));
+        // }
+        // return new ObjectResult(item);
         ProgrammerRepo.Add(item);
         return CreatedAtRoute("GetProgrammer", new { Controller = "Programmer", id = item.Id }, item);
 }

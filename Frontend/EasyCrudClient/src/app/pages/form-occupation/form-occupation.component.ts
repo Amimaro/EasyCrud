@@ -22,7 +22,11 @@ export class FormOccupationComponent implements OnInit {
 
   ngOnInit() {
     this.programmer = this.programmerService.getCurrentProgrammer();
-    console.log(this.programmerService.getCurrentProgrammer());
+    if (this.programmer.bestTime != null && this.programmer.availability != null) {
+      this.bestTime = this.programmer.bestTime;
+      this.availability = this.programmer.availability;
+    }
+    console.log(this.programmer);
   }
 
   next() {

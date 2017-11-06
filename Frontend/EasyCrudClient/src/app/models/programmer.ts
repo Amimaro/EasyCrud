@@ -13,7 +13,7 @@ export class Programmer {
   city: string = null;
   state: string = null;
   portfolio: string = null;
-  salary: number = null;
+  salary: number = 0;
   bank: string = null;
   link: string = null;
   availability: Availability = null;
